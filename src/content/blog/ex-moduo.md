@@ -1,45 +1,43 @@
 ---
-author: Thomas Potts
-pubDatetime: 2024-08-01T00:00:00Z
-title: Moduo
-slug: ex-moduo
-featured: true
-draft: false
+author:** Thomas Potts
+pubDatetime:** 2024-08-01T00:00:00Z
+title:** Moduo
+slug:** ex-moduo
+featured:** true
+draft:** false
 tags:
   - metholodogy
   - design
-description: A Balanced Approach to Software Development
+description:** A Balanced Approach to Software Development
 ---
 
-## Table of contents
+# A Balanced Approach to Software Development
 
-# Moduo: A Balanced Approach to Software Development
-
-Moduo is a software development methodology that harmonizes upfront design with iterative implementation, emphasizing modularity and cognitive efficiency.
+Moduo is a simple development methodology that uses natural modes of thinking, and avoid common pitfalls of software design.
 
 ## Key Principles:
 
-- Dual-Mode Thinking: Moduo separates abstract design from concrete implementation, allowing developers to focus on one cognitive mode at a time.
-- Modular Progression: Projects advance module by module, ensuring manageable chunks of work and continuous integration.
-- Iterative Refinement: Each module undergoes a cycle of design, implementation, and testing, allowing for adaptation based on practical insights.
-- Balanced Documentation: Starting with a comprehensive README, Moduo maintains a equilibrium between planning and flexibility.
+- **Dual-Mode Thinking:** Separate the abstract / design phase from concrete / implementation phases. This means better mental focus on one cognitive mode at a time.
+- **Modular Completion, Not Time Completion:** Projects advance module by module, ensuring manageable chunks of work and continuous integration.
+- **Iterative Refinement:** Each module goes through design, implementation, and testing, while allowing for adaptation based on practical insights.
 
 ## The Moduo Process:
 
-### Project Orientation:
+### Project Start:
 
 Create a thorough README document outlining the project's goals and high-level structure.
 
 ### Module Cycle:
 
-1. **Design**: Draft a detailed document for the module, striving for independance of other modules.
-2. **Implement**: Code the module based on the design.
-3. **Test**: Thoroughly test the module in isolation and with existing modules.
-4. **Iteration**: Repeat the Module Cycle for each component until project completion.
+1. **Plan:** Write a detailed design document(s) for the module, striving for independance of other modules.
+2. **Develop:** Code the module based on the design.
+3. **Test:** Thoroughly test the module in isolation and with existing modules.
+4. **Reflect:** Make adjustments to design document(s) based on actual code used based on practical insights, or refactor code to re-align to original content until complete.
+5. **Repeat:** Repeat the Module Cycle for each component until project completion.
 
 ## Benefits of Moduo:
 
-- Cognitive Clarity: By separating design and implementation phases, Moduo reduces mental context switching.
-- Adaptability: The modular approach allows for adjustments without derailing the entire project.
-- Continuous Progress: Regular completion of functional modules provides tangible progress and opportunities for feedback.
-- Balanced Structure: Moduo offers enough structure to guide development without stifling creativity or adaptability.
+- **Cognitive Clarity:** By separating design and implementation phases, Moduo reduces mental context switching.
+- **Adaptability:** The modular approach allows for adjustments without derailing the entire project.
+- **Continuous Progress:** Regular completion of functional modules provides tangible progress and opportunities for feedback.
+- **Balanced Structure:** Moduo offers enough structure to guide development without stifling creativity or adaptability.
