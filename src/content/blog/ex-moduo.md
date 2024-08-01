@@ -1,14 +1,14 @@
 ---
-author:** Thomas Potts
-pubDatetime:** 2024-08-01T00:00:00Z
-title:** Moduo
-slug:** ex-moduo
-featured:** true
-draft:** false
+author: Thomas Potts
+pubDatetime: 2024-08-01T00:00:00Z
+title: Moduo
+slug: ex-moduo
+featured: true
+draft: false
 tags:
   - metholodogy
   - design
-description:** A Balanced Approach to Software Development
+description: A Balanced Approach to Software Development
 ---
 
 # A Balanced Approach to Software Development
