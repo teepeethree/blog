@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "T Potts",
   profile: "https://github.com/teepeethree",
   desc: "TPotts - Blog",
-  title: "tpotts's Blog",
+  title: "tpotts's blog",
   ogImage: "🫖",
   lightAndDarkMode: true,
   postPerIndex: 4,
