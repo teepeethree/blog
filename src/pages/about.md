@@ -3,34 +3,22 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+I'm based in the UK, currently working on a few things at the moment.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+## How I built this blog
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+It's a very simple set-up, and you could probably spin up a clone of this blog within a few hours even if you are a beginner.
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+It comprises of:
 
-## Tech Stack
+- Storing the application code, and content on Github;
+- Deploying the code / content to a Vercel instance; and
+- Configuring Vercel to use my domain that I purchased.
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+## How to connect
 
-## Features
+I'm usually more than happy to chat and partner with others if it fits in well with my own schedule.
 
-Here are certain features of this site.
+If you send me a message, or email and I ignore you, don't take it personally. I usually get around to geniune emails.
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+If you have any changes / issues / whatever you can contribute by going the [repo](https://github.com/teepeethree/blog) and opening a pull request.
