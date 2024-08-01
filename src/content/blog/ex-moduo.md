@@ -8,7 +8,7 @@ draft: false
 tags:
   - metholodogy
   - design
-description:
+description: A Balanced Approach to Software Development
 ---
 
 ## Table of contents
