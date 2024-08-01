@@ -6,6 +6,7 @@ slug: ex-moduo
 featured: true
 draft: false
 tags:
+  - moduo
   - metholodogy
   - design
 description: A Balanced Approach to Software Development
