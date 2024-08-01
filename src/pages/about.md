@@ -22,3 +22,9 @@ I'm usually more than happy to chat and partner with others if it fits in well w
 If you send me a message, or email and I ignore you, don't take it personally. I usually get around to geniune emails.
 
 If you have any changes / issues / whatever you can contribute by going the [repo](https://github.com/teepeethree/blog) and opening a pull request.
+
+## How to contribute
+
+If you have found this blog useful, and you want to show some appreciation, then consider sending something to my wallet.
+
+Ethereum Mainnet: 0x74499230968aE3E31dd7bA53bc40916178Bf1708
