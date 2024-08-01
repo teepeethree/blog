@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "about"
 ---
 
 I'm based in the UK, currently working on a few things at the moment.
