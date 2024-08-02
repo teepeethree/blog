@@ -1,5 +1,5 @@
 ---
-author: Thomas Potts
+author: tpotts
 pubDatetime: 2024-08-01T00:00:00Z
 title: Moduo
 slug: ex-moduo

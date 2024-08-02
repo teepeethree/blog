@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://www.tpotts.co.uk",
   author: "T Potts",
   profile: "https://github.com/teepeethree",
-  desc: "TPotts - Blog",
+  desc: "a blog of random thoughts",
   title: "tpotts's blog",
   ogImage: "🫖",
   lightAndDarkMode: true,
