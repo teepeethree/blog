@@ -38,4 +38,10 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `Send an email to ${SITE.title}`,
     active: true,
   },
+  {
+    name: "Twitter",
+    href: "https://x.com/tpotts_eth",
+    linkTitle: `${SITE.title} on X`,
+    active: true,
+  },
 ];
