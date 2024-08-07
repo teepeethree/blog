@@ -3,7 +3,7 @@ author: tpotts
 pubDatetime: 2023-10-23T00:00:00Z
 title: Zero Trust Architecture
 slug: ex-zta
-featured: true
+featured: false
 draft: false
 tags:
   - zero-trust-architecture

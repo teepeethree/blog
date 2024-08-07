@@ -3,7 +3,7 @@ author: tpotts
 pubDatetime: 2023-11-08T00:00:00Z
 title: SOLID Principles
 slug: ex-solid
-featured: true
+featured: false
 draft: false
 tags:
   - SOLID
