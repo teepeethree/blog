@@ -1,8 +1,8 @@
 # Define the fixed directory path
 $directoryPath = "C:\Programming\webapp\blog\dangerous-debris\src\content\blog"
 
-# Get the current date and time
-$currentDate = Get-Date
+# Get the current date and time, then subtract 45 minutes
+$currentDate = (Get-Date).AddMinutes(-45)
 
 # Format the date for the filename
 $fileNameDate = $currentDate.ToString("yyyyMMdd")
@@ -59,3 +59,4 @@ if (-not (Test-Path -Path $directoryPath)) {
 Set-Content -Path $newFilePath -Value $fullContent
 
 Write-Host "New Study Journal entry created: $newFilePath"
+Write-Host "Adjusted datetime used: $pubDateTime"
