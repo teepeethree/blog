@@ -2,6 +2,8 @@ import type { APIRoute } from "astro";
 import { sql } from "@vercel/postgres";
 import { v4 as uuidv4 } from "uuid";
 
+export const prerender = false;
+
 const isValidEmail = (email: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
@@ -34,22 +36,27 @@ const reactivateSubscriber = async (email: string): Promise<void> => {
 };
 
 export const GET: APIRoute = async ({ request }) => {
+  console.log("GET request received");
   return new Response(JSON.stringify({ message: "Subscribe API is working" }), {
     status: 200,
+    headers: { "Content-Type": "application/json" },
   });
 };
 
 export const POST: APIRoute = async ({ request }) => {
+  console.log("POST request received");
   try {
     const data = await request.formData();
     const email = data.get("email")?.toString();
+
+    console.log("Email received:", email);
 
     if (!email || !isValidEmail(email)) {
       return new Response(
         JSON.stringify({
           message: "Please enter a valid email address",
         }),
-        { status: 400 }
+        { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 
@@ -62,7 +69,7 @@ export const POST: APIRoute = async ({ request }) => {
             message:
               "You're already subscribed! I appreciate your enthusiasm though!",
           }),
-          { status: 403 }
+          { status: 403, headers: { "Content-Type": "application/json" } }
         );
       } else {
         await reactivateSubscriber(email);
@@ -70,7 +77,7 @@ export const POST: APIRoute = async ({ request }) => {
           JSON.stringify({
             message: "Your subscription has been reactivated!",
           }),
-          { status: 200 }
+          { status: 200, headers: { "Content-Type": "application/json" } }
         );
       }
     }
@@ -80,23 +87,15 @@ export const POST: APIRoute = async ({ request }) => {
       JSON.stringify({
         message: "You are now subscribed!",
       }),
-      { status: 200 }
+      { status: 200, headers: { "Content-Type": "application/json" } }
     );
   } catch (error) {
-    console.error("Subscription error:", error);
-    if (error instanceof Error) {
-      return new Response(
-        JSON.stringify({
-          message: `An error occurred: ${error.message}`,
-        }),
-        { status: 500 }
-      );
-    }
+    console.error("Error in POST handler:", error);
     return new Response(
       JSON.stringify({
         message: "An unexpected error occurred while processing your request.",
       }),
-      { status: 500 }
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 };

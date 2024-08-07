@@ -11,31 +11,31 @@ const MailingListForm: React.FC = () => {
     setMessage('');
     setIsError(false);
     setIsLoading(true);
-
+  
     try {
       const formData = new FormData();
       formData.append('email', email);
-
+  
       console.log('Sending request to /api/subscribe');
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         body: formData,
       });
-
+  
       console.log('Response status:', response.status);
       console.log('Response headers:', Object.fromEntries(response.headers));
-
+  
+      const text = await response.text();
+      console.log('Response text:', text);
+  
       let data;
-      const contentType = response.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        data = await response.json();
-        console.log('Response data:', data);
-      } else {
-        const text = await response.text();
-        console.log('Response text:', text);
-        throw new Error('Unexpected response format');
+      try {
+        data = JSON.parse(text);
+      } catch (error) {
+        console.error('Error parsing JSON:', error);
+        throw new Error('Invalid JSON response');
       }
-
+  
       if (response.ok) {
         setMessage(data.message);
         setEmail('');
