@@ -41,8 +41,8 @@ const MailingListForm = () => {
   return (
     <div className="w-full max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
       <div className="px-6 py-4">
-        <h2 className="text-xl font-bold mb-2">Subscribe to Our Newsletter</h2>
-        <p className="mb-4">Stay updated with our latest blog posts and news!</p>
+        <h2 className="text-xl font-bold mb-2">Join my cult of personality</h2>
+        <p className="mb-4">I usually send out a more personal mail out to my <s>cult</s> subscribers.</p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="email"

@@ -37,8 +37,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </p>
     </section>
 
-    <MailingList client:load/>
-
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         View Posts
@@ -50,6 +48,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </LinkButton>
     </div>
     <Hr />
+
+    <MailingList client:load/>
 
     {
       featuredPosts.length > 0 && (
