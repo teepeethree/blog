@@ -16,23 +16,37 @@ const MailingListForm: React.FC = () => {
       const formData = new FormData();
       formData.append('email', email);
 
+      console.log('Sending request to /api/subscribe');
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         body: formData,
       });
 
-      const data = await response.json();
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers));
+
+      let data;
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+        console.log('Response data:', data);
+      } else {
+        const text = await response.text();
+        console.log('Response text:', text);
+        throw new Error('Unexpected response format');
+      }
 
       if (response.ok) {
         setMessage(data.message);
         setEmail('');
       } else {
         setIsError(true);
-        setMessage(data.message || 'An error occurred. Please try again.');
+        setMessage(data.message || `Error: ${response.status} ${response.statusText}`);
       }
     } catch (error) {
+      console.error('Error in handleSubmit:', error);
       setIsError(true);
-      setMessage('An error occurred. Please try again later.');
+      setMessage(`An error occurred: ${error instanceof Error ? error.message : 'Unknown error'}`);
     } finally {
       setIsLoading(false);
     }
@@ -62,10 +76,10 @@ const MailingListForm: React.FC = () => {
           </button>
         </form>
         {message && (
-          <div className={`mt-4 p-3 rounded ${isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
-            {message}
-          </div>
-        )}
+        <div className={`mt-4 p-3 rounded ${isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+          {message}
+        </div>
+      )}
       </div>
     </div>
   );
