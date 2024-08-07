@@ -37,7 +37,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </p>
     </section>
 
-    <MailingList />
+    <MailingList client:load/>
 
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
