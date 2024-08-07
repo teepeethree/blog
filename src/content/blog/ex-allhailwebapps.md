@@ -1,17 +1,14 @@
 ---
 author: tpotts
 pubDatetime: 2024-07-03T00:00:00Z
-title: Study Journal 03-07-2024
-slug: sj-20240703
+title: All hail web apps
+slug: ex-allhailwebapps
 featured: false
 draft: false
 tags:
-  - study-journal
-description: Study Journal entry for 03-07-2024
+  - web-app
+description: All hail web apps
 ---
-#### [:rewind: Go back to index](../@index.md)
-
-# Diary Entry - 03/07/2024
 
 ## All hail web apps - down with mobile apps
 
@@ -55,4 +52,3 @@ The architecture would be:
 - PocketBase
 
 Where? Not sure where it'd be hosted. Should be hosted on the main server, and have a sub-domain to point to the app.
-
