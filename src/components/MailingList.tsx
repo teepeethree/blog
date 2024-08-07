@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const MailingListForm = () => {
+const MailingListForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isError, setIsError] = useState(false);
@@ -25,7 +25,7 @@ const MailingListForm = () => {
 
       if (response.ok) {
         setMessage(data.message);
-        setEmail(''); // Clear the input on success
+        setEmail('');
       } else {
         setIsError(true);
         setMessage(data.message || 'An error occurred. Please try again.');

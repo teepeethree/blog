@@ -33,6 +33,12 @@ const reactivateSubscriber = async (email: string): Promise<void> => {
   `;
 };
 
+export const GET: APIRoute = async ({ request }) => {
+  return new Response(JSON.stringify({ message: "Subscribe API is working" }), {
+    status: 200,
+  });
+};
+
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.formData();
