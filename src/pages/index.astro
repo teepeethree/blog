@@ -49,11 +49,14 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     </div>
     <Hr />
 
-    <div class="py-8">
-      <Hr />
+    <div class="py-4">
     </div>
 
     <MailingList client:load/>
+
+    <div class="py-4">
+      <Hr />
+    </div>
 
     {
       featuredPosts.length > 0 && (
