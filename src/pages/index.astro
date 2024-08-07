@@ -8,6 +8,7 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE } from "@config";
+import MailingList from "@components/MailingList";
 
 const posts = await getCollection("blog");
 
@@ -35,6 +36,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         Thanks for coming to my TED talk.
       </p>
     </section>
+
+    <MailingList />
 
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
