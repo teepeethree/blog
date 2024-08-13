@@ -1,6 +1,8 @@
 /*
 
-Prompt the user to enter the password, if not authenticated, then break. Otherwise continue.
+Prompt the user to enter the password, 
+    if not authenticated, then break. 
+    Otherwise continue.
 
 Pull resume as JSON Object from database:
 
