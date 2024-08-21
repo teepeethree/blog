@@ -33,12 +33,21 @@ description: Study Journal entry for $titleDate
 # Create the initial content
 $initialContent = @"
 # Where I'm at
+
 - 
 
 # What I learnt
+
 - 
 
 # What I did
+
+- 
+
+# What I reviewed
+
+The content that I reviewed today was: []()
+
 - 
 
 "@
