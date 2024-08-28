@@ -43,16 +43,16 @@ tags:
  - study-journal
 description: Study Journal entry for $TITLE_DATE
 ---
-**# Where I'm at**
+# Where I'm at
 - 
 
-**# What I learnt**
+# What I learnt
 - 
 
-**# What I did**
+# What I did
 - 
 
-**# What I reviewed**
+# What I reviewed
 The content that I reviewed today was: [$DESCRIPTION](./$RANDOM_FILE)
 - 
 EOL
