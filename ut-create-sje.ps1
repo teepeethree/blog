@@ -4,18 +4,52 @@ $directoryPath = "C:\Programming\webapp\blog\dangerous-debris\src\content\blog"
 # Get the current date and time, then subtract 45 minutes
 $currentDate = (Get-Date).AddMinutes(-45)
 
-# Format the date for the filename
+# Format dates for filename and frontmatter
 $fileNameDate = $currentDate.ToString("yyyyMMdd")
-
-# Create the new filename
-$newFileName = "sj-$fileNameDate.md"
-
-# Format the date and time for the frontmatter
 $pubDatetime = $currentDate.ToString("yyyy-MM-ddTHH:mm:ssZ")
 $titleDate = $currentDate.ToString("dd-MM-yyyy")
 
-# Create the frontmatter content
-$frontmatter = @"
+# Create new filename
+$newFileName = "sj-$fileNameDate.md"
+$newFilePath = Join-Path -Path $directoryPath -ChildPath $newFileName
+
+# Function to extract metadata from file
+function Get-FileMetadata($filePath) {
+  $content = Get-Content $filePath -Raw
+  if ($content -match '(?s)^---\s*\r?\n(.*?)\r?\n---') {
+    $metadata = $matches[1] -split "\r?\n"
+    $metadataObj = @{}
+    foreach ($line in $metadata) {
+      if ($line -match '^(\w+):\s*(.*)$') {
+        $key = $matches[1]
+        $value = $matches[2].Trim()
+        if ($value -match '^\[.*\]$') {
+          # Handle array values
+          $value = $value.Trim('[]') -split ',\s*' | ForEach-Object { $_.Trim() }
+        }
+        $metadataObj[$key] = $value
+      }
+    }
+    return $metadataObj
+  }
+  return $null
+}
+
+# Select a random file from the directory
+$randomFile = Get-ChildItem -Path $directoryPath -File | Get-Random
+$randomFilePath = $randomFile.FullName
+
+# Extract description from the random file's frontmatter
+$metadata = Get-FileMetadata $randomFilePath
+$description = if ($metadata -and $metadata.ContainsKey("description")) { 
+  $metadata.description 
+}
+else { 
+  $randomFile.Name 
+}
+
+# Create the content for the new file
+$content = @"
 ---
 author: tpotts
 pubDatetime: $pubDatetime
@@ -27,45 +61,26 @@ tags:
   - study-journal
 description: Study Journal entry for $titleDate
 ---
-
-"@
-
-# Create the initial content
-$initialContent = @"
 # Where I'm at
-
-- 
-
+-
 # What I learnt
-
-- 
-
+-
 # What I did
-
-- 
-
+-
 # What I reviewed
-
-The content that I reviewed today was: []()
-
-- 
-
+The content that I reviewed today was: [$description](./$($randomFile.Name))
+-
 "@
 
-# Create the full path for the new file
-$newFilePath = Join-Path -Path $directoryPath -ChildPath $newFileName
-
-# Combine the frontmatter and initial content
-$fullContent = $frontmatter + $initialContent
-
-# Check if the directory exists
+# Check if the directory exists, create it if it doesn't
 if (-not (Test-Path -Path $directoryPath)) {
-    Write-Host "The specified directory does not exist. Creating it now."
-    New-Item -ItemType Directory -Path $directoryPath -Force
+  New-Item -ItemType Directory -Path $directoryPath -Force
 }
 
-# Write the full content to the new file
-Set-Content -Path $newFilePath -Value $fullContent
+# Write the content to the new file
+Set-Content -Path $newFilePath -Value $content
 
+# Output results
 Write-Host "New Study Journal entry created: $newFilePath"
-Write-Host "Adjusted datetime used: $pubDateTime"
+Write-Host "File selected for review: $($randomFile.Name)"
+Write-Host "Description used for link: $description"
