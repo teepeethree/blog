@@ -40,3 +40,9 @@ I have a bad working memory, if I were a computer, I might have two slots for me
 - Why even a tiny amount of exercise can help massively during the day, as it helps open up more memory, and also has the added bonus of getting my mood back on track if it's been a bad day!
 
 Basically I'm on the same level as Dory for memory, well maybe not that extreme but it gives you a good approximation.
+
+## Perfectionism
+
+Basically, I'm good at coming up with an idea. I'm terrible at the first draft, but I'm ok with revisions after that.
+
+I need something to blame other than myself, and if I blame myself then I just end up getting stuck.
