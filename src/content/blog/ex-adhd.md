@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - adhd
+  - perfectionism
 description: A guide to understanding how I behave
 ---
 
@@ -43,6 +44,62 @@ Basically I'm on the same level as Dory for memory, well maybe not that extreme 
 
 ## Perfectionism
 
-Basically, I'm good at coming up with an idea. I'm terrible at the first draft, but I'm ok with revisions after that.
+## Understanding My Tendencies:
 
-I need something to blame other than myself, and if I blame myself then I just end up getting stuck.
+- I have a high need for external control, likely compensating for a lack of internal control.
+- I struggle with adapting to changing circumstances and being interrupted mid-task.
+- My expectations are often unrealistic, assuming I should already be #1.
+- Reaching the top doesn't give me pride in myself, but only temporary relief that I'm not incongruent with my outward demeanour.
+- I suffer in anticipation, imagining criticism of my "less than perfect" work.
+
+## Shifting Mindset:
+
+### Perfection and Control:
+
+- Perfection is an illusion that shields us from potential hurt but ultimately prevents us from starting.
+- Success comes from resilience and continuous improvement, not instant perfection.
+- Excessive control, like perfectionism, can weigh us down. Consider embracing "antifragility" - systems that gain from disorder.
+
+### Embracing Uncertainty:
+
+- Uncertainty is a powerful source of growth and creativity.
+- It's a blank canvas for flexible thinking and improved problem-solving skills.
+
+### Realistic Self-Assessment:
+
+- Most people are primarily concerned with themselves, not critically judging others.
+- Others' reactions are not a reliable measure of worth.
+- Consider: "Compared to what? At what cost? What hard evidence supports this?"
+
+### Healthy Approaches:
+
+- Let go of the need to be #1 immediately. Focus on getting started and improving over time.
+- Practice mindfulness and cognitive flexibility.
+- Rely on others for social and moral support while building resilience.
+
+## Business Insights:
+
+### Innovation Opportunities:
+
+- Beauty and accessibility can trump raw technical expertise.
+- Target systems that are clunky, artificially complex, "ugly", or lack standardization.
+- Consider a "digital refurbishment" approach: updating old ideas/software for modern use.
+
+### Market Strategy:
+
+- Saturated markets can be good opportunities, allowing for profit from small innovations.
+- Competition isn't scary; learn from it, but don't let it paralyze you.
+- Many groundbreaking ideas were initially rejected before becoming standard.
+
+### Product Development:
+
+- Focus on making products beautiful and highly accessible.
+- Small innovations in existing products can lead to significant success.
+- Remember: being #2 or #3 in a field can still be incredibly successful and impactful.
+
+## Moving Forward:
+
+- Cultivate a healthier sense of control and quality standards.
+- Practice adapting to changes and interruptions.
+- Set realistic expectations and celebrate incremental progress.
+- Focus on starting and improving, rather than achieving instant perfection.
